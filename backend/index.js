@@ -12,8 +12,7 @@ let jsonData = {
   },
 };
 
-let jokesdata={
-  "jokes": [
+let jokesdata=[
     {
       "id": 1,
       "category": "General",
@@ -35,7 +34,6 @@ let jokesdata={
       "text": "Knock, knock. Who's there? Lettuce. Lettuce who? Lettuce in, it's cold out here!"
     }
   ]
-}
 
 import express from "express";
 import dotenv from "dotenv";
@@ -50,7 +48,7 @@ app.get("/login", (req, res) => {
 app.get("/sample", (req, res) => {
   res.json(jsonData);
 });
-app.get("/jokes", (req, res) => {
+app.get("/api/jokes", (req, res) => {
   res.json(jokesdata);
 });
 
